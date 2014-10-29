@@ -11,24 +11,20 @@ describe "Tic Tac Toe, in arrays" do
     ]
   }
 
-  before do
-    pending
-  end
-
   describe "counting usage per row" do
     it "returns how many times X was played in each row" do
-      xs_per_row = ___
+      xs_per_row = data.map { |i| i.count("X")}
       expect(xs_per_row).to be == [1, 2, 1]
     end
 
-    xit "returns how many times O was played in each row" do
-      os_per_row = ___
+    it "returns how many times O was played in each row" do
+      os_per_row = data.map { |i| i.count("O")}
       expect(os_per_row).to be == [2, 1, 2]
     end
   end
 
   describe "getting coordinates of usage" do
-    xit "returns an array of [row, column] array coordinates for each usage of X" do
+    it "returns an array of [row, column] array coordinates for each usage of X" do
       x_coordinates = ___
       expect(x_coordinates).to be == [[0, 0], [1, 0], [1, 1], [2, 1]]
     end
