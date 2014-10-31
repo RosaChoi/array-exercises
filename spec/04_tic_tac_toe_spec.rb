@@ -25,18 +25,29 @@ describe "Tic Tac Toe, in arrays" do
 
   describe "getting coordinates of usage" do
     it "returns an array of [row, column] array coordinates for each usage of X" do
-      x_coordinates = ___
+      x_coordinates = []
+      data.each_with_index do |row, outer_index|
+        row.each_with_index do |letter, inner_index|
+          x_coordinates.push([outer_index, inner_index]) if letter == "X"
+        end
+      end
+
       expect(x_coordinates).to be == [[0, 0], [1, 0], [1, 1], [2, 1]]
     end
 
-    xit "returns an array of [row, column] array coordinates for each usage of O" do
-      x_coordinates = ___
+    it "returns an array of [row, column] array coordinates for each usage of O" do
+      x_coordinates = []
+      data.each_with_index do |row, outer_index|
+        row.each_with_index do |letter, inner_index|
+          x_coordinates.push([outer_index, inner_index]) if letter == "O"
+        end
+      end
       expect(x_coordinates).to be == [[0, 1], [0, 2], [1, 2], [2, 0], [2, 2]]
     end
   end
 
   describe "testing who won" do
-    xit "determines whether X or O won" do
+    it "determines whether X or O won" do
       winner = ___
       expect(winner).to be == 'O'
     end
